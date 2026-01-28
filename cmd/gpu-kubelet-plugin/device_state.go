@@ -365,7 +365,6 @@ func (s *DeviceState) Prepare(ctx context.Context, claim *resourceapi.ResourceCl
 		return nil, fmt.Errorf("unable to prepare claim %v: %w", claimUID, err)
 	}
 
-	
 	// ========================================
 	// 步骤 3: 记录 "PrepareStarted" 状态
 	// ========================================
