@@ -51,6 +51,7 @@ func (l *LoggingConfig) Flags() []cli.Flag {
 	var fs pflag.FlagSet
 
 	// This also registers klog configuration flags (such as -v).
+	// 通过 Kubernetes 标准库提供的 api 注册所有日志配置标志，其中就包括日志输出目标
 	logsapi.AddFlags(l.config, &fs)
 
 	// Note: We do NOT add the feature-gates flag here anymore.
